@@ -23,7 +23,7 @@ public class SpringController {
 //		Integer sec = date.getSecond();
 		val++;
 //		Integer count = year + month + day + hour + min + sec + 1;
-		String result = "UPES welcomes you in " + val + " seconds!!!!!!!!!!!";
+		String result = "Thapar University welcomes you in " + val + " seconds!!!!!!!!!!!";
 		return result;
 	}
 }

@@ -41,7 +41,7 @@
                         <goal>repackage</goal>
                     </goals>
                     <configuration>
-                        <finalName>UPES</finalName>
+                        <finalName>Thapar</finalName>
                     </configuration>
                 </execution>
             </executions>
