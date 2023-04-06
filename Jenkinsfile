@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 
     agent any 
 
@@ -18,21 +18,21 @@ pipeline{
         stage('INTEGRATION TESTING') {
             steps {
                 sh 'mvn verify -DskipUnitTests'
-            }    
+            }
         }
         stage('BUILD') {
             steps {
                 sh 'mvn clean install'
             }
+        }
         stage('STATIC CODE ANALYSIS') {
-           steps {
-             script {
+            steps {
+                script {
                     withSonarQubeEnv(credentialsId: 'sonarqubetoken') {
                         sh 'mvn clean package sonar:sonar'
                     }
                 }
             }
-         }
+        } 
     }
-}
 }
