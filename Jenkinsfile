@@ -1,5 +1,5 @@
 pipeline{
-    
+
     agent any 
 
     stages {
@@ -18,6 +18,10 @@ pipeline{
         stage('INTEGRATION TESTING') {
             steps {
                 sh 'mvn verify -DskipUnitTests'
+            }
+            stage('BUILD') {
+            steps {
+                sh 'mvn clean install'
             }
         }
     }
